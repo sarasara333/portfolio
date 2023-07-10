@@ -32,8 +32,47 @@
   
   --section-margin: 120px;
 }
+
+section{
+    margin-bottom: 300px;
+}
+section>h3{
+    display: flex;
+    justify-content: center;
+}
+section .imgcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+section .imgcontainer img{
+    max-width: 30%;
+}
+section  .main-img{
+    max-width: 80%;
+}
+section .content{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 header ul{
     display: flex;
     list-style: none;
     justify-content: space-evenly;
 }
+.About .aboutcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.About img{
+    max-width: 40%;
+
+}
+
