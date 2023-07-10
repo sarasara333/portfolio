@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'BIZ UDPGothic', sans-serif;
+}
+*::after, *::before {
+    box-sizing: inherit;
+  }
+  :root{
+      /* スムーススクロール用 */
+  scroll-behavior: smooth;
+  font-family: BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-size: 14pt;
+  font-feature-settings: "palt";
+  --dark-087: rgba(0,0,0,0.87);
+  --dark-054: rgba(0,0,0,0.54);
+  --dark-026: rgba(0,0,0,0.26);
+  --dark-012: rgba(0,0,0,0.12);
+  --light-100: rgba(255,255,255,1.00);
+  --light-070: rgba(255,255,255,0.70);
+  --light-030: rgba(255,255,255,0.30);
+  --light-012: rgba(255,255,255,0.12);
+  --gray-010: #f1f1f1;
+  --gray-020: #e4e4e4;
+
+  --primary-050: #D36922;
+  --secondary-050: #2CD47F;
+  --base-bg: var(--dark-087);
+  --text-color: var(--primary-050);
+  
+  --section-margin: 120px;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
