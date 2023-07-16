@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
 </head>
 <body>
     <header>
+        <div class="menu-overlay">
+            
+        </div>
+
+    <button id="menu-toggle" class="menu-button">
+        <span class="menu-lines"></span>
+        <span class="menu-lines"></span>
+        <span class="menu-text">MENU</span>
+    </button>
         <nav>
             <ul>
                 <li ><a href="#">TOP</a></li>
@@ -17,8 +27,77 @@
                 <li ><a href="#">イラスト</a></li>
             </ul>
         </nav>
-        <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="top画像">
+        <!-- <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="top画像"> -->
     </header>
+    <section class="Top">
+        <div >
+            <p class="name">TAIKI<br>ISOGAWA</p>
+            <p class="portfolio">portfolio</p>
+        </div>
+    </section>
+    <section class="CG">
+        <!-- <h3>CG制作</h3> -->
+        <div class="imgcontainer">
+            <a href="" class="btn01">
+                <img src="imgfile/スクリーンショット 20236 190642.png" alt="">
+            </a>
+            <a href="" class="btn02">
+                <img src="imgfile/スクリーンショット 206 194303.png" alt="">
+            </a>
+            <a href="" class="btn03">
+                <img src="imgfile/スリーンショット 2023-07-16 192332.png" alt="">
+            </a>
+        </div>
+        <div class="content">
+            <a href="" class="btn04">
+                <img src="imgfile/スクリーンショット 2023-07-16 16.57.38.png" alt="">
+            </a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
+            <a href="#">詳細</a>
+        </div>
+    </section>
+    <section class="Movie">
+        <!-- <h3>動画</h3> -->
+        <div class="imgcontainer">
+            <a href="" class="btn05">
+                <img src="imgfile/スクリーンショット 2023-07-16 22.19.07.png" alt="">
+            </a>
+            <a href="" class="btn06">
+                <img src="imgfile/スクリーンショット 2023-07-16 21.35.43.png" alt="">
+            </a>
+            <a href=""  class="btn07">
+                <img src="imgfile/スクリーンショット 2023-07-16 22.18.48.png" alt="">
+            </a>
+        </div>    
+        <div class="content">
+            <a href="" class="btn08">
+                <img class="main-img" src="imgfile/スクリーンショット 2023-07-16 22.21.52.png" alt="">
+            </a>            
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
+            <a href="#">詳細</a>
+        </div>
+    </section>
+    <section class="Illust">
+        <!-- <h3>イラスト</h3> -->
+        <div class="imgcontainer">
+            <a href="" class="btn09">
+                <img src="imgfile/CamScanner 2023-07-16 17.47（ドラッグされました） 5.jpg" alt="">
+            </a>
+            <a href=""  class="btn10">
+                <img src="imgfile/CamScanner 2023-07-16 17.47（ドラッグされました） 4.jpg" alt="">
+            </a>
+            <a href="" class="btn11">
+                <img src="imgfile/CamScanner 2023-07-16 17.47（ドラッグされました） 3.jpg" alt="">
+            </a>
+        </div> 
+        <div class="content">
+            <a href="" class="btn12">
+                <img class="main-img" src="imgfile/CamScanner 2023-07-16 17.47（ドラッグされました）.jpg" alt="">
+            </a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
+            <a href="#">詳細</a>
+        </div>
+    </section>
     <section class="About">
         <h3>ABOUT</h3>
         <div class="aboutcontainer">
@@ -30,45 +109,115 @@
         </div>
 
     </section>
-    <section class="CG">
-        <h3>CG制作</h3>
-        <div class="imgcontainer">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-        </div>
-        <div class="content">
-            <img class="main-img" src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
-            <a href="#">詳細</a>
-        </div>
-    </section>
-    <section class="Movie">
-        <h3>動画制作</h3>
-        <div class="imgcontainer">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-        </div>    
-        <div class="content">
-            <img class="main-img" src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
-            <a href="#">詳細</a>
-        </div>
-    </section>
-    <section class="Illust">
-        <h3>イラスト</h3>
-        <div class="imgcontainer">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <img src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-        </div> 
-        <div class="content">
-            <img class="main-img" src="img/スクリーンショット 2023-07-10 9.04.58.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum provident nostrum iste vitae, incidunt magni delectus commodi accusamus assumenda, voluptates quae. Unde officiis sequi aut amet distinctio, odit minima tenetur?</p>
-            <a href="#">詳細</a>
-        </div>
-    </section>
+
+
+
+
+
+
+
+<!-- オーバーレイ -->
+<div class="overlay"></div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal01 modal">
+  <div class="close01">×</div>
+    <h2>モダルのタイトル01</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+
+<!-- モーダルウィンドウ -->
+<div class="modal02 modal">
+  <div class="close02">×</div>
+    <h2>モダルのタイトル02</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal03 modal">
+  <div class="close03">×</div>
+    <h2>モダルのタイトル03</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal04 modal">
+  <div class="close04">×</div>
+    <h2>モダルのタイトル04</h2>
+    <!-- <video src="imgfile/マイムービー 1.mp4" autoplay loop controls></video> -->
+
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+
+
+<!-- モーダルウィンドウ -->
+<div class="modal05 modal">
+  <div class="close05">×</div>
+    <h2>モダルのタイトル05</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+<!-- モーダルウィンドウ -->
+<div class="modal06 modal">
+  <div class="close06">×</div>
+    <h2>モダルのタイトル06</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal07 modal">
+  <div class="close07">×</div>
+    <h2>モダルのタイトル07</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal08 modal">
+  <div class="close08">×</div>
+    <h2>モダルのタイトル08</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+
+
+
+
+<!-- モーダルウィンドウ -->
+<div class="modal09 modal">
+  <div class="close09">×</div>
+    <h2>モダルのタイトル09</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal10 modal">
+  <div class="close10">×</div>
+    <h2>モダルのタイトル10</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal11 modal">
+  <div class="close11">×</div>
+    <h2>モダルのタイトル11</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+<!-- モーダルウィンドウ -->
+<div class="modal12 modal">
+  <div class="close12">×</div>
+    <h2>モダルのタイトル12</h2>
+    <p>ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。ここにモダルの内容が入ります。</p>
+</div>
+
+
+
+
+
+
+
+
+
     
 </body>
 </html>

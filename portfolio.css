@@ -4,26 +4,33 @@
     box-sizing: border-box;
     max-width: 100%;
     font-family: 'BIZ UDPGothic', sans-serif;
+    color: var(--dark-054);
 }
 *::after, *::before {
     box-sizing: inherit;
   }
+  body{
+    width: 100%;
+  }
   :root{
       /* スムーススクロール用 */
   scroll-behavior: smooth;
-  font-family: BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
   font-size: 14pt;
   font-feature-settings: "palt";
   --dark-087: rgba(0,0,0,0.87);
   --dark-054: rgba(0,0,0,0.54);
   --dark-026: rgba(0,0,0,0.26);
   --dark-012: rgba(0,0,0,0.12);
+  --dark-portfolio:#231815;
   --light-100: rgba(255,255,255,1.00);
   --light-070: rgba(255,255,255,0.70);
   --light-030: rgba(255,255,255,0.30);
   --light-012: rgba(255,255,255,0.12);
   --gray-010: #f1f1f1;
   --gray-020: #e4e4e4;
+
+  --gray-portfolio:#f9f9f9;
 
   --primary-050: #D36922;
   --secondary-050: #2CD47F;
@@ -34,7 +41,9 @@
 }
 
 section{
-    margin-bottom: 300px;
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: var(--gray-portfolio);
 }
 section>h3{
     display: flex;
@@ -45,11 +54,18 @@ section .imgcontainer{
     flex-direction: row;
     justify-content: space-evenly;
 }
-section .imgcontainer img{
-    max-width: 30%;
+section .imgcontainer a{
+    max-width: 25%;
 }
-section  .main-img{
-    max-width: 80%;
+section .content a{
+    max-width: 60%;
+}
+section .content a{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 section .content{
     margin-top: 50px;
@@ -65,7 +81,30 @@ header ul{
     display: flex;
     list-style: none;
     justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
 }
+header ul li a{
+    text-decoration: none;
+    font-size: small;
+}
+
+.Top{
+    display: flex;
+    height: 50vh;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Top .name{
+    color: var(--dark-portfolio);
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 3px;
+
+}
+
 .About .aboutcontainer{
     display: flex;
     flex-direction: row;
@@ -73,6 +112,686 @@ header ul{
 }
 .About img{
     max-width: 40%;
-
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-button {
+    position: fixed;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #FFD610;
+    border-radius: 30px;
+    top: 47px;
+}
+  .menu-lines {
+    position: absolute;
+    width:52%;
+    height: 4px;
+    background-color: #ffffff;
+  }
+  
+  .menu-lines:nth-child(1) {
+    top: 20%;
+  }
+  
+  .menu-lines:nth-child(2) {
+    top: 38%;
+  }
+  
+
+  .menu-text {
+    font: normal normal bold 2px/1px BIZ UDPGothic;
+    letter-spacing: 0.76px;
+    color: #FFFFFF;
+    transform: translateY(-21px);
+    text-decoration: none;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    z-index: 1010;
+    top: 0;
+    right: -100%; /* 初期状態で画面右に隠れる */
+    width: 100%;
+    height: 100%;
+    background-color: #FFD610;
+    transition: right 0.4s ease;
+  }  
+  .menu-overlay.opened {
+    right: 0; /* 右からスライドして表示する */
+  }
+
+  .menu-button.cross .menu-text{
+    display: none;
+  }
+  .menu-button.cross {
+    background-color: transparent;
+  }
+  .menu-button.cross .menu-lines:nth-child(1) {
+    transform: rotate(45deg) translate(11px, 8px);
+  }
+  
+  .menu-button.cross .menu-lines:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-button.cross .menu-lines:nth-child(3) {
+    transform: rotate(-45deg) translate(11px, -8px);
+  }
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ボタンのデザイン */
+.btn {
+    display: inline-block;
+    /* text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right bottom, #FFA500, #FF6347);
+    border-radius: 5px;
+    color: #fff;
+    margin: 20px; */
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    opacity: .8;
+  }
+  
+  /* オーバーレイ */
+  .overlay {
+    /* 位置を固定 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 画面いっぱいに広がるようにする */
+    width: 100%;
+    height: 100vh;
+    /* rgbaを使って60%の黒いオーバーレイにする */
+    background: rgba(0, 0, 0, 0.6);  
+    /* デフォルトでは見えないようにする */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示する際の変化の所要時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたオーバーレイ */
+  .overlay.active {
+    /* activeクラスがついたときにオーバーレイを表示する */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ */
+  .modal01 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal01.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal01 .close01 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal01 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal01 p {
+    font-size: 13px;
+  }
+
+
+
+
+
+
+
+   /* モーダルウィンドウ */
+   .modal02 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal02.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal02 .close02 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal02 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal02 p {
+    font-size: 13px;
+  }
+  
+
+
+   /* モーダルウィンドウ */
+   .modal03 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal03.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal03 .close03 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal03 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal03 p {
+    font-size: 13px;
+  }
+
+
+
+
+
+
+     /* モーダルウィンドウ */
+     .modal04 {
+        width: 86%;
+        height: 90%;
+        padding: 15px 20px;
+        background: #fff;
+        /* 位置の調整(真ん中に表示) */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* デフォルトでは非表示にしておく */
+        opacity: 0;
+        visibility: hidden;
+        /* 表示の変化にかかる時間 */
+        transition: .3s;
+      }
+      
+      /* activeクラスのついたモーダルウィンドウ */
+      .modal04.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* モーダルウィンドウ内の閉じるボタン */
+      .modal04 .close04 {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+      .modal04 h2 {
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 10px;
+      }
+      
+      .modal04 p {
+        font-size: 13px;
+      }
+      
+    
+  
+
+   /* モーダルウィンドウ */
+   .modal05 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal05.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal05 .close05 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal05 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal05 p {
+    font-size: 13px;
+  }
+
+    /* モーダルウィンドウ */
+   .modal06 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal06.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal06 .close06 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal06 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal06 p {
+    font-size: 13px;
+  }
+
+
+
+      /* モーダルウィンドウ */
+   .modal07 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal07.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal07 .close07 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal07 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal07 p {
+    font-size: 13px;
+  }
+
+
+ /* モーダルウィンドウ */
+ .modal08 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal08.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal08 .close08 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal08 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal08 p {
+    font-size: 13px;
+  }
+
+
+ /* モーダルウィンドウ */
+ .modal09 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal09.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal09 .close09 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal09 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal09 p {
+    font-size: 13px;
+  }
+
+ /* モーダルウィンドウ */
+ .modal10 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal10.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal10 .close10 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal10 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal10 p {
+    font-size: 13px;
+  }
+
+ /* モーダルウィンドウ */
+ .modal11 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal11.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal11 .close11 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal11 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal11 p {
+    font-size: 13px;
+  }
+
+ /* モーダルウィンドウ */
+ .modal12 {
+    width: 86%;
+    height: 90%;
+    padding: 15px 20px;
+    background: #fff;
+    /* 位置の調整(真ん中に表示) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* デフォルトでは非表示にしておく */
+    opacity: 0;
+    visibility: hidden;
+    /* 表示の変化にかかる時間 */
+    transition: .3s;
+  }
+  
+  /* activeクラスのついたモーダルウィンドウ */
+  .modal12.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* モーダルウィンドウ内の閉じるボタン */
+  .modal12 .close12 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal12 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .modal12 p {
+    font-size: 13px;
+  }
