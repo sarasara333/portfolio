@@ -41,13 +41,20 @@
 }
 
 section{
-    width: 100%;
-    margin-bottom: 200px;
-    background-color: var(--gray-portfolio);
+  padding-top: 80px;
+  padding-bottom: 100px;
+  width: 100%;
+  margin-bottom: 150px;
+  background-color: var(--gray-portfolio);
+}
+section p{
+  padding-top: 30px;
 }
 section>h3{
     display: flex;
     justify-content: center;
+  position: relative;
+  bottom: 130px;
 }
 section .imgcontainer{
     display: flex;
@@ -55,18 +62,19 @@ section .imgcontainer{
     justify-content: space-evenly;
 }
 section .imgcontainer a{
-    max-width: 25%;
+    max-width: 20%;
 }
 section .content a{
-    max-width: 60%;
+    max-width: 45%;
+    max-height: 60%;
 }
 section .content a{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 section .content{
     margin-top: 50px;
     display: flex;
@@ -76,13 +84,27 @@ section .content{
 }
 
 
+.box{
+  width: 56%;
+  line-height: 1.8;
+  font-size: medium;
+  text-align: center;
+}
+
+
+
+
 
 header ul{
+  background-color:rgba(255, 255, 255, 0.8);
+    width: 100%;
+    position: fixed;
     display: flex;
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
-    height: 70px;
+    height: 50px;
+    z-index: 50;
 }
 header ul li a{
     text-decoration: none;
@@ -90,12 +112,14 @@ header ul li a{
 }
 
 .Top{
+  position: relative;
+  top: 55px;
     display: flex;
     height: 50vh;
-    
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 225px;
 }
 .Top .name{
     color: var(--dark-portfolio);
@@ -105,13 +129,33 @@ header ul li a{
 
 }
 
+.Illust .main-img{
+  transform: rotate(0deg);
+max-height: 50%;
+  object-fit: cover;
+  object-position: 0%;
+}
+.About{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  font-size: smaller;
+}
+
 .About .aboutcontainer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 90%;
+
 }
 .About img{
     max-width: 40%;
+    border-radius: 10%;
 }
 
 
@@ -119,124 +163,17 @@ header ul li a{
 
 
 
-
-
-
-
-
-
-
-
-
-
-.menu-button {
-    position: fixed;
-    z-index: 3000;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    right: 0;
-    border: none;
-    cursor: pointer;
-    background-color: #FFD610;
-    border-radius: 30px;
-    top: 47px;
-}
-  .menu-lines {
-    position: absolute;
-    width:52%;
-    height: 4px;
-    background-color: #ffffff;
-  }
-  
-  .menu-lines:nth-child(1) {
-    top: 20%;
-  }
-  
-  .menu-lines:nth-child(2) {
-    top: 38%;
-  }
-  
-
-  .menu-text {
-    font: normal normal bold 2px/1px BIZ UDPGothic;
-    letter-spacing: 0.76px;
-    color: #FFFFFF;
-    transform: translateY(-21px);
-    text-decoration: none;
-  }
-  
-  .menu-overlay {
-    position: fixed;
-    z-index: 1010;
-    top: 0;
-    right: -100%; /* 初期状態で画面右に隠れる */
-    width: 100%;
-    height: 100%;
-    background-color: #FFD610;
-    transition: right 0.4s ease;
-  }  
-  .menu-overlay.opened {
-    right: 0; /* 右からスライドして表示する */
-  }
-
-  .menu-button.cross .menu-text{
-    display: none;
-  }
-  .menu-button.cross {
-    background-color: transparent;
-  }
-  .menu-button.cross .menu-lines:nth-child(1) {
-    transform: rotate(45deg) translate(11px, 8px);
-  }
-  
-  .menu-button.cross .menu-lines:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-button.cross .menu-lines:nth-child(3) {
-    transform: rotate(-45deg) translate(11px, -8px);
-  }
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ボタンのデザイン */
-.btn {
-    display: inline-block;
-    /* text-decoration: none;
-    padding: 10px 20px;
-    background: linear-gradient(to right bottom, #FFA500, #FF6347);
-    border-radius: 5px;
-    color: #fff;
-    margin: 20px; */
-    transition: 0.3s;
-  }
-  
   .btn:hover {
     opacity: .8;
+    transition: 0.3s;
+
   }
-  
+  .modal{
+    z-index: 200;
+  }
   /* オーバーレイ */
   .overlay {
+    z-index: 100;
     /* 位置を固定 */
     position: fixed;
     top: 0;
@@ -259,6 +196,8 @@ header ul li a{
     opacity: 1;
     visibility: visible;
   }
+
+ 
   
   /* モーダルウィンドウ */
   .modal01 {
@@ -276,6 +215,24 @@ header ul li a{
     visibility: hidden;
     /* 表示の変化にかかる時間 */
     transition: .3s;
+  }
+  .modal01-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .modal01-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .modal01-inner img{
+    width: 50%;
   }
   
   /* activeクラスのついたモーダルウィンドウ */
@@ -326,6 +283,26 @@ header ul li a{
     /* 表示の変化にかかる時間 */
     transition: .3s;
   }
+
+  .modal02-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  .modal02-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .modal02-inner img{
+    width: 50%;
+  }
   
   /* activeクラスのついたモーダルウィンドウ */
   .modal02.active {
@@ -370,6 +347,25 @@ header ul li a{
     visibility: hidden;
     /* 表示の変化にかかる時間 */
     transition: .3s;
+  }
+  .modal03-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .modal03-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .modal03-inner img{
+    width: 50%;
   }
   
   /* activeクラスのついたモーダルウィンドウ */
@@ -418,7 +414,12 @@ header ul li a{
         visibility: hidden;
         /* 表示の変化にかかる時間 */
         transition: .3s;
+        
       }
+  .modal04-content{
+    text-align: center;
+    line-height: 1.8;
+  }
       
       /* activeクラスのついたモーダルウィンドウ */
       .modal04.active {
@@ -466,6 +467,10 @@ header ul li a{
     transition: .3s;
   }
   
+  .modal05-content{
+    text-align: center;
+    line-height: 1.8;
+  }
   /* activeクラスのついたモーダルウィンドウ */
   .modal05.active {
     opacity: 1;
@@ -507,6 +512,12 @@ header ul li a{
     visibility: hidden;
     /* 表示の変化にかかる時間 */
     transition: .3s;
+  }
+
+
+  .modal06-content{
+    text-align: center;
+    line-height: 1.8;
   }
   
   /* activeクラスのついたモーダルウィンドウ */
@@ -553,6 +564,12 @@ header ul li a{
     /* 表示の変化にかかる時間 */
     transition: .3s;
   }
+
+  .modal07-content{
+    text-align: center;
+    line-height: 1.8;
+  }
+  
   
   /* activeクラスのついたモーダルウィンドウ */
   .modal07.active {
@@ -598,6 +615,12 @@ header ul li a{
     transition: .3s;
   }
   
+
+
+  .modal08-content{
+    text-align: center;
+    line-height: 1.8;
+  }
   /* activeクラスのついたモーダルウィンドウ */
   .modal08.active {
     opacity: 1;
@@ -641,6 +664,12 @@ header ul li a{
     /* 表示の変化にかかる時間 */
     transition: .3s;
   }
+
+
+  .modal09-content{
+    text-align: center;
+    line-height: 1.8;
+  }
   
   /* activeクラスのついたモーダルウィンドウ */
   .modal09.active {
@@ -683,6 +712,12 @@ header ul li a{
     visibility: hidden;
     /* 表示の変化にかかる時間 */
     transition: .3s;
+  }
+
+
+  .modal10-content{
+    text-align: center;
+    line-height: 1.8;
   }
   
   /* activeクラスのついたモーダルウィンドウ */
@@ -728,6 +763,11 @@ header ul li a{
     transition: .3s;
   }
   
+
+  .modal11-content{
+    text-align: center;
+    line-height: 1.8;
+  }
   /* activeクラスのついたモーダルウィンドウ */
   .modal11.active {
     opacity: 1;
@@ -769,6 +809,14 @@ header ul li a{
     visibility: hidden;
     /* 表示の変化にかかる時間 */
     transition: .3s;
+    
+  }
+
+    
+
+  .modal12-content{
+    text-align: center;
+    line-height: 1.8;
   }
   
   /* activeクラスのついたモーダルウィンドウ */
@@ -794,4 +842,9 @@ header ul li a{
   
   .modal12 p {
     font-size: 13px;
+  }
+
+  .modal{
+    overflow-y: auto;
+
   }
