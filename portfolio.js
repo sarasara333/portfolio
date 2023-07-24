@@ -30,18 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
 
-
-
-
-
-
-
-
-
-
-
-
-
   // ボタン、モダル、モダルの閉じるボタン、オーバーレイを変数に格納
 const btn01 = document.querySelector('.btn01');
 const btn02 = document.querySelector('.btn02');
