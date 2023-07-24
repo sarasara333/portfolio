@@ -887,6 +887,7 @@ max-height: 50%;
 
   .modal{
     overflow-y: auto;
+    padding: 50px 20px;
 
   }
 
@@ -920,5 +921,10 @@ max-height: 50%;
 }
 .About img{
   width: 30%;
+}
+.modal{
+  overflow-y: auto;
+  padding: 60px 20px;
+
 }
 }
