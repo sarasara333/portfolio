@@ -60,7 +60,7 @@ section{
   background-color: var(--gray-portfolio);
 }
 section p{
-  padding-top: 30px;
+  padding-bottom: 30px;
 }
 section>h3{
     display: flex;
@@ -94,7 +94,7 @@ section .content a{
 }
 
 section .content{
-    margin-top: 50px;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,7 @@ section .content{
 
 
 .box{
-  width: 56%;
+  width: 81%;
   line-height: 1.8;
   font-size: medium;
   text-align: center;
@@ -139,6 +139,9 @@ header ul li a{
     text-align: center;
     margin-bottom: 225px;
 }
+.Top p{
+  padding: 0;
+}
 .Top .name{
     color: var(--dark-portfolio);
     font-size: 30px;
@@ -146,16 +149,20 @@ header ul li a{
     letter-spacing: 3px;
 
 }
-.CG>p{
+.ppp{
 position: relative;
-bottom: 52px;
+bottom: 15px;
 display: flex;
+line-height: 1.3;
 justify-content: center;
+flex-direction: column;
 align-items: center;
 text-align: center;
 padding: 0;
 }
-
+.ppp h3{
+  padding-bottom: 3%;
+}
 
 
 .Illust .main-img{
@@ -885,7 +892,7 @@ max-height: 50%;
 
 /* ーーーーーーーーーレスポンシブーーーーーーーーーーーーーーーー */
 @media (width <=768px) {
-  .CG>p:nth-child(3){
+  .ppp p:nth-child(3){
     display: none;
     }
 
@@ -896,12 +903,12 @@ max-height: 50%;
   height: 100vh;
   padding-top: 0;
   }
-  .CG>p:nth-child(2){
+  .ppp p:nth-child(2){
     display: none;
     }
-  .CG>p:nth-child(3){
+  .ppp p:nth-child(3){
     position: relative;
-    bottom: 80px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
