@@ -149,6 +149,10 @@ header ul li a{
     letter-spacing: 3px;
 
 }
+.Top .portfolio{
+  color: var(--dark-026);
+  font-size: smaller;
+}
 .ppp{
 position: relative;
 bottom: 15px;
